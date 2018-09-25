@@ -1,3 +1,4 @@
+import { SWITCH_PLAYER_O, SWITCH_PLAYER_X } from '../actions/players-actions';
 
 export const initialPlayersState = {
     turn: 'player X'
@@ -9,7 +10,7 @@ export const playersReducer = (state = initialPlayersState, action) => {
             return [
                 ...state,
                 {
-                    turn: action.changeToO
+                    turn: action.player_O
                 }
             ]
         }
@@ -18,7 +19,7 @@ export const playersReducer = (state = initialPlayersState, action) => {
                 ...state,
 
                 {
-                    turn: action.changeToX
+                    turn: action.player_X
                 }
             ]
         }
