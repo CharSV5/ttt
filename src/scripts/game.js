@@ -1,7 +1,13 @@
+ import Board from './board.js';
+ 
  class Game {
     constructor(turn, marker) {
         this.turn = turn;
         this.marker = marker;
+    }
+
+    startGame() {
+        const board = new Board
     }
 
     switchPlayer(turn) {
