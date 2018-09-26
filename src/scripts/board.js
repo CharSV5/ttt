@@ -7,7 +7,7 @@ class Board {
 
     makeBoard() {
         const cells = this.boardHeight * this.boardWidth
-        this.grid = new Array(cells)
+        this.grid = [...Array(cells).keys()]
     }
 
     showBoard() {
