@@ -13,6 +13,8 @@ class Board {
     showBoard() {
         return this.grid
     }
+
+    checkWinner()
 }
 
 module.exports = Board;
