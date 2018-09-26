@@ -1,6 +1,7 @@
  class Game {
-    constructor(turn) {
+    constructor(turn, marker) {
         this.turn = turn;
+        this.marker = marker;
     }
 
     switchPlayer(turn) {
@@ -9,6 +10,10 @@
 
     showTurn() {
         return this.turn
+    }
+
+    place(turn) {
+        this.marker = turn === 'Player X' ? 'X' : 'O'
     }
 }
 
