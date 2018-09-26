@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { switch_Player_O, switch_Player_X, place_X, place_O } from '../actions/players-actions';
-
+import BoardContainer from '../containers/board-container';
 
 class PlayersContainer extends Component {
     constructor(props) {
@@ -13,6 +13,7 @@ class PlayersContainer extends Component {
     render() {
         return(
             <div>
+                <BoardContainer turn={this.props.turn}/>
                 {this.props.turn}
             </div>
         )

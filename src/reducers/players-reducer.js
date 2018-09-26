@@ -1,4 +1,4 @@
-import { SWITCH_PLAYER_O, SWITCH_PLAYER_X, PLACE_X } from '../actions/players-actions';
+import { SWITCH_PLAYER_O, SWITCH_PLAYER_X, PLACE_X, PLACE_O } from '../actions/players-actions';
 
 export const initialPlayersState = {
     turn: 'player X'
