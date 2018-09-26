@@ -9,6 +9,7 @@
 
     startGame(height, width) {
         this.board = new Board(height, width)
+        this.board.makeBoard()
     }
 
     switchPlayer(turn) {
@@ -19,8 +20,9 @@
         return this.turn
     }
 
-    place(turn) {
+    place(turn, gridIndex) {
         this.marker = turn === 'Player X' ? 'X' : 'O'
+        this.board.grid.splice(gridIndex, 1, this.marker)
     }
 }
 

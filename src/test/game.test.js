@@ -19,18 +19,26 @@ describe('Game class', () => {
     });
 
     test('place places an X if player X turn', () => {
-        game.place('Player X');
+        game.startGame(3, 3);
+        game.place('Player X', 1);
         expect(game.marker).toBe('X')
     });
 
     test('place places an O if player O turn', () => {
-        game.place('Player O');
+        game.startGame(3, 3);
+        game.place('Player O', 1);
         expect(game.marker).toBe('O')
     })
 
     test('start Game creates a board', () => {
         game.startGame(3, 3);
         expect(game.board).toBeInstanceOf(Board)
+    })
+
+    test('place replaces a number in the grid array', () => {
+        game.startGame(3, 3);
+        game.place('Player X', 3);
+        expect(game.board.grid).toEqual([0, 1, 2, 'X', 4, 5, 6, 7, 8])
     })
 
 });
