@@ -32,6 +32,15 @@ export const playersReducer = (state = initialPlayersState, action) => {
                 }
             ]
         }
+        case PLACE_O: {
+            return [
+                ...state,
+
+                {
+                    turn: action.place_X
+                }
+            ]
+        }
         default:
         return state;
     }
