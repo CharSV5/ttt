@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { switch_Player_O, switch_Player_X } from '../actions/players-actions';
+import { switch_Player_O, switch_Player_X, place_X } from '../actions/players-actions';
 
 
 class PlayersContainer extends Component {
@@ -28,8 +28,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
         onSwitchPlayerO: switch_Player_O,
-        onSwitchPlayerX: switch_Player_X
-    })
+        onSwitchPlayerX: switch_Player_X,
+        onPlaceX: place_X
+    }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayersContainer)

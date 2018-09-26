@@ -2,6 +2,7 @@ import * as playersActions from '../actions/players-actions';
 
 const player_O = 'player O'
 const player_X = 'player X'
+const turn_X = 'X'
 
 describe('players actions', () => {
     describe('switch_Player_O', () => {
@@ -20,6 +21,15 @@ describe('players actions', () => {
                 player_X
             }
             expect(playersActions.switch_Player_X()).toEqual(expectedAction)
+        })
+    })
+    describe('place_X', () => {
+        it('should place an x if player X turn', () => {
+            const expectedAction = {
+                type: playersActions.PLACE_X,
+                turn_X
+            }
+            expect(playersActions.place_X()).toEqual(expectedAction)
         })
     })
 })
