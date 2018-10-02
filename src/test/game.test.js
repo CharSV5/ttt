@@ -30,10 +30,6 @@ describe('Game class', () => {
         expect(game.marker).toBe('O')
     })
 
-    test('start Game creates a board', () => {
-        game.startGame(3, 3);
-        expect(game.board).toBeInstanceOf(Board)
-    })
 
     test('place replaces a number in the grid array with an X', () => {
         game.startGame(3, 3);
@@ -49,4 +45,15 @@ describe('Game class', () => {
         expect(game.board.grid).toEqual([0, 1, 2, 'X', 'O', 5, 6, 7, 8])
     })
 
+    describe('startGame', () => {
+        test('it creates two arrays, recordX and record Y', () => {
+            game.startGame(3, 3);
+            expect(game.recordX).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8])
+            expect(game.recordY).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8])
+        })
+        test('start Game creates a board', () => {
+            game.startGame(3, 3);
+            expect(game.board).toBeInstanceOf(Board)
+        })
+    })
 });

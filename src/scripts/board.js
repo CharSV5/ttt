@@ -14,7 +14,7 @@ class Board {
         return this.grid
     }
 
-    checkWinner()
+    // checkWinner()
 }
 
 module.exports = Board;
